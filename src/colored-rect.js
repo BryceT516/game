@@ -60,6 +60,7 @@ class ColoredRect extends React.Component {
         onDragEnd={this.onDragEnd}
         onDragStart={this.onDragStart}
         onDragMove={this.onDragMove}
+        onClick={this.handleClick}
       >
         <Rect
           x={0}
@@ -68,7 +69,6 @@ class ColoredRect extends React.Component {
           height={this.state.height}
           fill={this.state.color}
           shadowBlur={5}
-          onClick={this.handleClick}
         />
         <Text
           text={this.state.xPosition  + ', ' + this.state.yPosition}
