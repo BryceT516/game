@@ -16,9 +16,6 @@ class GameLayer extends React.Component {
     
     return(
     this.props.rects.map(function(object, i){
-      console.log("i = " + i);
-      console.log(object);
-  
       <Rect
         x={10}
         y={10}

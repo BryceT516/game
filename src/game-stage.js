@@ -8,7 +8,7 @@ class GameStage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      game_layer_rects: [ {id: 1, name: 'rect1'}, { id: 2, name: 'rect2' } ]
     }
   }
 
@@ -23,7 +23,7 @@ class GameStage extends React.Component {
         height={window.innerHeight}
         onDragStart={this.stageDragStart}
         >
-        <GameLayer />
+        <GameLayer rects={this.state.game_layer_rects}/>
       </Stage>
     );
   }

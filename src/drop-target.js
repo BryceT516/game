@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Group, Rect, Text } from 'react-konva';
-import Konva from 'konva';
+import { Rect } from 'react-konva';
 
 class DropTarget extends React.Component {
   state = {

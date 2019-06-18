@@ -71,7 +71,7 @@ class ColoredRect extends React.Component {
           shadowBlur={5}
         />
         <Text
-          text={this.state.xPosition  + ', ' + this.state.yPosition}
+          text={this.props.id + ' ' + this.state.xPosition  + ', ' + this.state.yPosition}
           x={0}
           y={0}
           width={this.state.width}
