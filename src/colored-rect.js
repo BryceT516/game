@@ -4,14 +4,20 @@ import { Group, Rect, Text } from 'react-konva';
 import Konva from 'konva';
 
 class ColoredRect extends React.Component {
-  state = {
-    color: 'green',
-    xPosition: 20,
-    yPosition: 20,
-    width: 70,
-    height: 50,
-    isDragging: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: props.id,
+      name: props.name,
+      color: 'green',
+      xPosition: 20,
+      yPosition: 20,
+      width: 70,
+      height: 50,
+      isDragging: false
+    };
+  }
+  
 
   handleClick = () => {
     this.setState({
@@ -71,7 +77,7 @@ class ColoredRect extends React.Component {
           shadowBlur={5}
         />
         <Text
-          text={this.props.id + ' ' + this.state.xPosition  + ', ' + this.state.yPosition}
+          text={this.state.id + ' ' + this.state.name + ' ' + this.state.xPosition  + ', ' + this.state.yPosition}
           x={0}
           y={0}
           width={this.state.width}
